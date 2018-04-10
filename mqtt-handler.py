@@ -8,7 +8,7 @@ configure = Config()                                            # create configu
 options = configure.options                                     # create options variable
 threshold = options["threshold"]                                # create threshold variable from options
 url = options["post_to_url"]                                    # create url from options
-timer = 3                                                       # timer threshold (non user specific)
+timer = 30                                                      # timer threshold (non user specific)
 
 
 '''
