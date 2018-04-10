@@ -13,11 +13,11 @@ This is a simple example on how to subscribe to an MQTT broker and selected topi
 -initiate json-server in terminal and make sure the db.json file is correctly defined and present in the json-server execution path.
 
 -run python main.py with desired options. (broker and topic are required)
-valid_options = --help <help> 
-                -u <User>
-                -h or -b <broker>
-                -p <port>
-                -t <topic>
+valid_options = --help help 
+                -u User
+                -h or -b broker
+                -p port
+                -t topic
                 -n Client ID or Name
-                -v <threshold>
-                -a <URL> 
+                -v threshold
+                -a URL 
