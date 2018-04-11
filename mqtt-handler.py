@@ -89,11 +89,17 @@ def on_connect(client, userdata, flags, rc):
 mqtt specific function. See paho documentation https://github.com/eclipse/paho.mqtt.python
 '''
 def on_disconnect(client, userdata, flags, rc=0):
+    if rc != 0:
+        print "MQTT disconnection. Attempting to reconnect."
+        try:
+            mqttc.reconnect()
+        except socket.error:
+            print("Disconnected result code " + str(rc))
     logging.debug("disconnecting reason  " + str(rc))
     client.connected_flag = False
     client.disconnect_flag = True
     client.subscribe_flag = False
-    print("Disconnected result code " + str(rc))
+    
 
 
 
